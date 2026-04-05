@@ -1,0 +1,280 @@
+/* Variables */
+:root {
+    --obsidian: #121212; /* Dark background */
+    --gold: #d4af37; /* Primary gold accent */
+    --jade: #00a877; /* Secondary jade accent */
+    --soft-light: #f0f0f0; /* Subtle white highlight */
+    --border: #333333; /* Thin border color */
+    --panel: #1f1f1f; /* Dark panel background */
+}
+
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    background-color: var(--obsidian);
+    color: var(--soft-light);
+    line-height: 1.8;
+    opacity: 0; /* For fade-in effect */
+    transition: opacity 800ms ease-in;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 0.5rem 0;
+    font-family: 'Garamond', serif;
+    color: var(--gold);
+    letter-spacing: 0.05rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+a {
+    color: var(--soft-light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--jade);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+p {
+    margin: 0.5rem auto;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--soft-light);
+}
+
+/* Navigation */
+.main-header nav {
+    background-color: var(--obsidian);
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.main-header nav ul li {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.03rem;
+}
+
+.main-header nav ul li a {
+    padding: 0.2rem 0.5rem;
+    transition: color 0.3s;
+}
+
+.main-header nav ul li a:hover {
+    border-bottom: 2px solid var(--gold);
+}
+
+/* Active Navigation Link */
+.active-nav {
+    color: var(--gold);
+    border-bottom: 2px solid var(--gold);
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    margin: 4rem auto 2rem auto;
+    padding: 0 1rem;
+}
+
+.supporting-text {
+    font-size: 1.2rem;
+    color: var(--jade);
+    letter-spacing: 0.02rem;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+    font-style: italic;
+    color: var(--soft-light);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+/* Portal Cards Section */
+.portal-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    flex-basis: 300px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 5px transparent;
+}
+
+.card a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    color: var(--gold);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px var(--jade);
+}
+
+/* For Codex Pages */
+.codex-page {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.codex-page h1 {
+    margin-bottom: 1rem;
+}
+
+.codex-page p {
+    margin-bottom: 2rem;
+}
+
+/* Sacred Blocks */
+.sacred-block {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: var(--gold);
+    line-height: 1.9;
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+    box-shadow: 0px 0px 10px transparent;
+    transition: box-shadow 0.3s ease;
+}
+
+.sacred-block:hover {
+    box-shadow: 0px 0px 20px var(--gold);
+}
+
+/* Sanctuary Cards Section */
+.sanctuaries {
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+.sanctuaries h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.sanctuaries p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--soft-light);
+}
+
+.sanctuary-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-align: center;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0px 0px 5px transparent;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.sanctuary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 10px var(--gold);
+}
+
+/* Footer */
+footer {
+    margin-top: 3rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    color: var(--soft-light);
+    font-style: italic;
+}
+
+/* Container Wrapper for Layout */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+    .portal-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        flex-basis: auto;
+        margin-bottom: 1rem;
+    }
+
+    .main-header nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .main-header nav ul li {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .supporting-text {
+        font-size: 1rem;
+    }
+
+    .portal-cards {
+        padding: 1rem;
+    }
+}
